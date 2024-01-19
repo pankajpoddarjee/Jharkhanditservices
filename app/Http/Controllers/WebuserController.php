@@ -36,19 +36,21 @@ class WebuserController extends Controller
         }
 
         // $inputData = $request->except(['_token','user_id']);
-        if($request->file('profile_image')) {
-        $file = $request->file('profile_image');
-        $filename = time()."-".$file->getClientOriginalName();
-        $file->move('uploads',$filename);
-        $filepath = 'uploads/'.$filename;
-        }
+        
         $inputData = array(
             'name' => $request->name,
             'email' => $request->email,
             'mobile' => $request->mobile,
-            'address' => $request->address,
-            'profile_image' => $filepath ??''
+            'address' => $request->address
         );
+
+        if($request->file('profile_image')) {
+            $file = $request->file('profile_image');
+            $filename = time()."-".$file->getClientOriginalName();
+            $file->move('uploads',$filename);
+            $filepath = 'uploads/'.$filename;
+            $inputData['profile_image']=$filepath;
+        }
 
         if(!empty($request->user_id)){
             DB::table('webusers')->where('id',$request->user_id)->update($inputData);
