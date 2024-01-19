@@ -25,7 +25,6 @@
                 </div>
                 <div class="form-group">
                     <label for="input-4">Address</label>
-                    <!-- <input type="text" class="form-control" id="input-4" placeholder="Enter Password"> -->
                     <textarea id="" class="form-control" cols="30" rows="4" placeholder="Enter Address" name="address">{{ old('address', $user->address ?? '') }}</textarea>
                     <div class="text-danger">{{ $errors->first('address') }}</div>
                 </div>

@@ -22,10 +22,6 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-// Route::get('/users', [WebuserController::class, 'index'])->middleware(['auth', 'verified'])->name('users');
-// Route::post('create-user', [WebuserController::class, 'createUser']);
-// Route::get('add-user', [WebuserController::class, 'addEditUser']);
-
 Route::prefix('users')->name('users.')->group(function () {
     Route::get('/users', [WebuserController::class, 'index'])->name('users');
     Route::get('add-user', [WebuserController::class, 'addUser'])->name('add');
