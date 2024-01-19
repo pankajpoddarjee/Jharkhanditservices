@@ -8,7 +8,7 @@
         <div class="col-lg-12">
           <div class="card">
             <div class="card-body">
-                <div><h5 class="card-title">Users Data </h5><h5 class="addnew"><a href="{!! route('users.add') !!}">Add New</a></h5></div>
+                <h5 class="card-title tblhead">Users Data </h5><h5 class="addnew"><a href="{!! route('users.add') !!}">Add New</a></h5>
               
 			  <div class="table-responsive">
               <table class="table table-bordered">
