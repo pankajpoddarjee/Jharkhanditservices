@@ -84,7 +84,7 @@
                 </x-responsive-nav-link>
                 </li>
                 <li class="dropdown-divider"></li>
-                <li class="dropdown-item">
+                <li class="dropdown-item" class="logoutnav" style="display: inline-flex;">
                   <i class="icon-power mr-2"></i> <form method="POST" action="{{ route('logout') }}">
                     @csrf
 
