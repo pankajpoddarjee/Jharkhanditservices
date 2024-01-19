@@ -11,3 +11,6 @@
 .logoutnav{
 	display: inline-flex !important;
 }
+.fix-footer{
+	position: fixed;
+}

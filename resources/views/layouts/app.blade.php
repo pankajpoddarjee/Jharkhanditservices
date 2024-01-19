@@ -54,7 +54,7 @@
       </a>
       <!--End Back To Top Button-->
       <!--Start footer-->
-      <footer class="footer">
+      <footer class="footer fix-footer">
         <div class="container">
           <div class="text-center"> Copyright © Jharkhand IT Services </div>
         </div>
