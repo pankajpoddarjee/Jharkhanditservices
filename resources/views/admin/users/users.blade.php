@@ -33,7 +33,7 @@
                     <td>{{$value->email}}</td>
                     <td>{{$value->mobile}}</td>
                     <td>{{$value->address}}</td>
-                    <td><a href="{!! route('users.edit',$value->id) !!}">Edit</a> &nbsp;<a href="{!! route('users.delete',$value->id) !!}" onclick="return confirm('Are you sure want to delete this user?')">Delete</a> </td>
+                    <td><a href="{!! route('users.edit',$value->id) !!}"><i class="fa fa-edit"></i></a> &nbsp;&nbsp;<a href="{!! route('users.delete',$value->id) !!}" onclick="return confirm('Are you sure want to delete this user?')"><i class="fa fa-trash"></i></a> </td>
                   </tr>
                   @endforeach                  
                   @else
