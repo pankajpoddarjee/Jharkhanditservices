@@ -28,7 +28,7 @@
                     @foreach($users as $value)
                   <tr>
                     <td scope="row">{{$loop->iteration}}</td>
-                    <td><img src="{{ $value->profile_image ?url($value->profile_image):url('assets/images/user.png') }}" alt="{{$value->name}}"  class="usrImgTbl"></td>
+                    <td><img src="{{ $value->profile_image ?url($value->profile_image):url('assets/images/no-image.png') }}" alt="{{$value->name}}"  class="usrImgTbl"></td>
                     <td>{{$value->name}}</td>
                     <td>{{$value->email}}</td>
                     <td>{{$value->mobile}}</td>
