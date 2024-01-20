@@ -10,8 +10,18 @@ use Redirect;
 
 class WebuserController extends Controller
 {
-    public function index(){
-        $users = DB::table('webusers')->get();
+    public function index(Request $request){
+        $users = DB::table('webusers');
+        if(!empty($request->keyword)){
+            $users = $users->where('name','like','%'.$request->keyword.'%');
+            $users = $users->orWhere('mobile','like','%'.$request->keyword.'%');
+        }
+        $users = $users->paginate(10);
+        if(!empty($request->keyword)){
+            $querystringArray = ['keyword' => $request->keyword];
+            $users->appends($querystringArray);
+        }
+
         return view('admin/users/users',compact('users'));
     }
     public function addUser(){

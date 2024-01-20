@@ -14,3 +14,28 @@
 .fix-footer{
 	position: fixed;
 }
+.tbl-search{
+	width: 530px;
+}
+.pagination nav a{
+	color: white;
+}
+.text-muted{
+	color: white !important;
+}
+.overflow-hidden {
+    overflow-y:hidden;
+}
+.srch-btn{
+	color: white;
+	width:68px !important;
+}
+.src-input{
+	width:200px !important;
+}
+.srch-tbl{
+	display: inline-flex;
+}
+.pagination{
+	padding-left: 186px;
+}
